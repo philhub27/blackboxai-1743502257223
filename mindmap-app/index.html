@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Map Creator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      touch-action: manipulation;
+    }
+    #canvas-container {
+      touch-action: none;
+    }
+    .node {
+      transition: all 0.2s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="flex flex-col h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-purple-600 to-blue-500 text-white p-4 shadow-lg">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold">
+          <i class="fas fa-project-diagram mr-2"></i> Mind Map Creator
+        </h1>
+        <div class="flex space-x-4">
+          <button id="export-btn" class="bg-white text-purple-600 px-3 py-1 rounded-lg">
+            <i class="fas fa-download mr-1"></i> Export
+          </button>
+          <button id="theme-toggle" class="bg-white text-purple-600 px-3 py-1 rounded-lg">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex flex-1 overflow-hidden">
+      <!-- Tools Panel -->
+      <div class="w-16 bg-white shadow-lg flex flex-col items-center py-4 space-y-6 tools-panel">
+        <button id="add-node" class="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button id="delete-btn" class="p-2 rounded-full bg-red-100 text-red-600 hover:bg-red-200">
+          <i class="fas fa-trash"></i>
+        </button>
+        <div class="color-picker grid grid-cols-1 gap-2">
+          <div class="w-8 h-8 rounded-full bg-purple-600 border-2 border-white shadow cursor-pointer" data-color="#6A11CB"></div>
+          <div class="w-8 h-8 rounded-full bg-blue-500 border-2 border-white shadow cursor-pointer" data-color="#2962FF"></div>
+          <div class="w-8 h-8 rounded-full bg-teal-400 border-2 border-white shadow cursor-pointer" data-color="#14FFEC"></div>
+          <div class="w-8 h-8 rounded-full bg-pink-500 border-2 border-white shadow cursor-pointer" data-color="#FF4560"></div>
+        </div>
+      </div>
+
+      <!-- Canvas Area -->
+      <div id="canvas-container" class="flex-1 bg-white relative overflow-hidden">
+        <canvas id="mindmap-canvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+      </div>
+      
+      <!-- Zoom Controls -->
+      <div class="zoom-controls">
+        <button id="zoom-in" class="zoom-btn">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="zoom-out" class="zoom-btn">
+          <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="zoom-reset" class="zoom-btn">
+          <i class="fas fa-expand"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/mindmap.js"></script>
+</body>
+</html>
