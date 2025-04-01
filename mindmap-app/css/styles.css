@@ -1,0 +1,97 @@
+/* Mobile-specific enhancements */
+@media (max-width: 768px) {
+  #canvas-container {
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tools-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10px;
+    z-index: 100;
+  }
+
+  .color-picker {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #1a202c;
+}
+
+.dark #canvas-container {
+  background-color: #2d3748;
+}
+
+.dark .tools-panel {
+  background-color: #2d3748;
+  border-top: 1px solid #4a5568;
+}
+
+/* Node animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.node-selected {
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Touch feedback */
+button:active, .color-swatch:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* Connection line styles */
+.connection-line {
+  stroke-dasharray: 5, 5;
+  stroke-linecap: round;
+}
+
+.connection-line:hover {
+  stroke-width: 3px;
+}
+
+/* Zoom controls */
+.zoom-controls {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zoom-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
