@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyTracks | Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Header -->
+    <div id="header">
+        <!--#include virtual="partials/header.html" -->
+    </div>
+
+    <!-- Pricing Hero -->
+    <section class="bg-primary-700 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Simple, Transparent Pricing</h1>
+            <p class="text-xl max-w-2xl mx-auto">
+                Choose the plan that works best for your productivity needs
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Tiers -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Tier -->
+                <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Free</h3>
+                    <p class="text-4xl font-bold mb-6 text-gray-800 dark:text-white">$0<span class="text-lg text-gray-600 dark:text-gray-400">/month</span></p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Perfect for getting started with basic tracking</p>
+                    <button class="w-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-800 dark:text-white py-3 rounded-lg font-semibold transition">
+                        Get Started
+                    </button>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Basic task tracking</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">3 habits</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">1 project</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Mobile app access</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Tier (Featured) -->
+                <div class="relative bg-white dark:bg-gray-700 border-2 border-primary-500 p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="absolute top-0 right-0 bg-primary-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Pro</h3>
+                    <p class="text-4xl font-bold mb-6 text-gray-800 dark:text-white">$9.99<span class="text-lg text-gray-600 dark:text-gray-400">/month</span></p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">For serious productivity enthusiasts</p>
+                    <button class="w-full bg-primary-500 hover:bg-primary-600 text-white py-3 rounded-lg font-semibold transition">
+                        Start Free Trial
+                    </button>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Everything in Free</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Unlimited habits</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">10 projects</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Advanced analytics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Custom reports</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Tier -->
+                <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Business</h3>
+                    <p class="text-4xl font-bold mb-6 text-gray-800 dark:text-white">$19.99<span class="text-lg text-gray-600 dark:text-gray-400">/month</span></p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">For teams and power users</p>
+                    <button class="w-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-800 dark:text-white py-3 rounded-lg font-semibold transition">
+                        Contact Sales
+                    </button>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Everything in Pro</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Unlimited projects</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Team collaboration</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">Priority support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600 dark:text-gray-300">API access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-700">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800 dark:text-white">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Is there a free trial available?</h3>
+                        <i class="fas fa-chevron-down text-primary-500 transition-transform"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 dark:text-gray-300">
+                        Yes! You can try our Pro plan free for 14 days. No credit card required.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Can I cancel anytime?</h3>
+                        <i class="fas fa-chevron-down text-primary-500 transition-transform"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 dark:text-gray-300">
+                        Absolutely. You can cancel your subscription at any time with no penalties.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Do you offer discounts for students?</h3>
+                        <i class="fas fa-chevron-down text-primary-500 transition-transform"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 dark:text-gray-300">
+                        Yes, we offer a 50% discount for students with a valid .edu email address.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer">
+        <!--#include virtual="partials/footer.html" -->
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
